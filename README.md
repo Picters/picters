@@ -1,7 +1,7 @@
 # Repositories
 
-| repo | what it is | stars |
-|---|---|---|
+| repo | what it is |
+|---|---|
 | **[Xiaomi 17 Kernel](https://github.com/Picters/android_kernel_xiaomi_sm8850-extra)** | Kernel with extra modules. |
 | **[Xiaomi 17 4K120 Unlocker](https://github.com/Picters/Xiaomi17-4K120-Unlocker)** | Module that unlocks 4K120 video recording. |
 
