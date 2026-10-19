@@ -49,12 +49,27 @@ a {
 }
 
 .project {
+  position: relative;
   display: block;
   overflow: hidden;
   border: 1px solid #252529;
   border-radius: 14px;
   background: #111114;
   transition: border-color 350ms, box-shadow 350ms;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ffffff50, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 350ms;
 }
 
 .project-image {
@@ -67,8 +82,10 @@ a {
 .project-image::after {
   content: "";
   position: absolute;
-  inset: 45% 0 0;
-  background: linear-gradient(to bottom, transparent, #111114);
+  inset: 0;
+  background:
+    linear-gradient(to bottom, transparent 43%, #111114),
+    linear-gradient(to right, #11111480, transparent 18% 82%, #11111480);
   pointer-events: none;
 }
 
@@ -85,16 +102,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 16px 20px;
+  padding: 0 16px 19px;
   text-align: center;
 }
 
 h2 {
   margin: 0;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
   line-height: 1.4;
   letter-spacing: -.3px;
+  color: #dedee4;
+  transition: color 350ms;
 }
 
 p {
@@ -111,6 +130,14 @@ p {
 
 .project:focus-visible img {
   filter: brightness(1) saturate(1);
+}
+
+.project:focus-visible::before {
+  opacity: 1;
+}
+
+.project:focus-visible h2 {
+  color: #fff;
 }
 
 footer {
@@ -140,8 +167,16 @@ footer a:focus-visible {
 
 @media (hover: hover) and (pointer: fine) {
   .project:hover {
-    border-color: #4b4540;
-    box-shadow: 0 16px 42px -18px #000b;
+    border-color: #41414b;
+    box-shadow: 0 12px 36px -22px #000c;
+  }
+
+  .project:hover::before {
+    opacity: 1;
+  }
+
+  .project:hover h2 {
+    color: #fff;
   }
 
   .project:hover img {
@@ -169,7 +204,6 @@ footer a:focus-visible {
   .project img {
     filter: brightness(.92) saturate(.9);
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
