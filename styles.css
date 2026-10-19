@@ -54,8 +54,7 @@ a {
   border: 1px solid #252529;
   border-radius: 14px;
   background: #111114;
-  transform: translateY(0);
-  transition: transform 350ms cubic-bezier(.2, .75, .25, 1), border-color 350ms, background 350ms, box-shadow 350ms;
+  transition: border-color 350ms, box-shadow 350ms;
 }
 
 .project-image {
@@ -79,7 +78,7 @@ a {
   height: 100%;
   object-fit: cover;
   filter: brightness(.74) saturate(.8);
-  transition: filter 450ms, transform 650ms cubic-bezier(.2, .75, .25, 1);
+  transition: filter 450ms;
 }
 
 .project-caption {
@@ -141,14 +140,12 @@ footer a:focus-visible {
 
 @media (hover: hover) and (pointer: fine) {
   .project:hover {
-    transform: translateY(-7px);
     border-color: #4b4540;
     box-shadow: 0 16px 42px -18px #000b;
   }
 
   .project:hover img {
     filter: brightness(1) saturate(1);
-    transform: scale(1.035);
   }
 }
 
@@ -172,9 +169,6 @@ footer a:focus-visible {
     filter: brightness(.92) saturate(.9);
   }
 
-  .project:active {
-    transform: scale(.985);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
