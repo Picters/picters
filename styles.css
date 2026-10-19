@@ -17,17 +17,18 @@ body {
 }
 
 main {
-  width: min(1120px, calc(100% - 96px));
+  width: min(940px, calc(100% - 80px));
   margin: 0 auto;
-  padding: clamp(80px, 23vh, 240px) 0 40px;
+  padding: clamp(64px, 22vh, 200px) 0 32px;
 }
 
 h1 {
-  margin: 0 0 38px;
-  font-size: clamp(30px, 4vw, 46px);
+  margin: 0 0 28px;
+  font-size: clamp(28px, 3.5vw, 38px);
   font-weight: 550;
   line-height: 1.2;
-  letter-spacing: -1.8px;
+  letter-spacing: -1.5px;
+  text-align: center;
 }
 
 h1 span {
@@ -38,7 +39,7 @@ h1 span {
 .projects {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: 18px;
 }
 
 a {
@@ -51,16 +52,25 @@ a {
   display: block;
   overflow: hidden;
   border: 1px solid #252529;
-  border-radius: 16px;
+  border-radius: 14px;
   background: #111114;
   transform: translateY(0);
   transition: transform 350ms cubic-bezier(.2, .75, .25, 1), border-color 350ms, background 350ms, box-shadow 350ms;
 }
 
 .project-image {
+  position: relative;
   overflow: hidden;
   aspect-ratio: 16 / 9;
   background: #171719;
+}
+
+.project-image::after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(to bottom, transparent, #111114);
+  pointer-events: none;
 }
 
 .project img {
@@ -75,36 +85,24 @@ a {
 .project-caption {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 21px 22px 23px;
+  justify-content: center;
+  padding: 5px 16px 20px;
+  text-align: center;
 }
 
 h2 {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: -.3px;
 }
 
 p {
-  margin: 5px 0 0;
+  margin: 4px 0 0;
   color: #909098;
   font-size: 13px;
   line-height: 1.5;
-}
-
-.arrow {
-  width: 19px;
-  height: 19px;
-  flex-shrink: 0;
-  color: #777780;
-  stroke: currentColor;
-  stroke-width: 1.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: color 350ms, transform 350ms;
 }
 
 .project:focus-visible {
@@ -117,7 +115,8 @@ p {
 }
 
 footer {
-  margin-top: 32px;
+  margin-top: 20px;
+  text-align: center;
   font-size: 13px;
   color: #8c8c95;
 }
@@ -143,7 +142,6 @@ footer a:focus-visible {
 @media (hover: hover) and (pointer: fine) {
   .project:hover {
     transform: translateY(-7px);
-    background: #17171b;
     border-color: #4b4540;
     box-shadow: 0 16px 42px -18px #000b;
   }
@@ -152,27 +150,22 @@ footer a:focus-visible {
     filter: brightness(1) saturate(1);
     transform: scale(1.035);
   }
-
-  .project:hover .arrow {
-    color: #efeff1;
-    transform: translate(2px, -2px);
-  }
 }
 
 @media (max-width: 760px) {
   main {
-    width: min(520px, calc(100% - 40px));
-    padding-top: 72px;
+    width: min(360px, calc(100% - 48px));
+    padding-top: 56px;
   }
 
   h1 {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     letter-spacing: -1.2px;
   }
 
   .projects {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
 
   .project img {
