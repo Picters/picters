@@ -1,7 +1,6 @@
 <p align="center">
   <a href="https://picters.github.io/picters/"><strong>Picters projects ↗</strong></a>
   <br>
-  <sub>picters.github.io/picters</sub>
 </p>
 
 # Repositories
