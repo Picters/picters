@@ -78,7 +78,7 @@ a {
   height: 100%;
   object-fit: cover;
   filter: brightness(.74) saturate(.8);
-  transition: filter 450ms;
+  transition: filter 450ms, transform 650ms cubic-bezier(.2, .75, .25, 1);
 }
 
 .project-caption {
@@ -146,6 +146,7 @@ footer a:focus-visible {
 
   .project:hover img {
     filter: brightness(1) saturate(1);
+    transform: scale(1.035);
   }
 }
 
