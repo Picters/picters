@@ -6,7 +6,7 @@
 
 | repo | what it is |
 |---|---|
-| **[Xiaomi 17 Picters Kernel](https://github.com/Picters/android_kernel_xiaomi_sm8850-extra)** | Kernel with OOT modules. |
+| **[Xiaomi 17 Picters Kernel](https://github.com/Picters/PictersKernel-Xiaomi17)** | Kernel with OOT modules. |
 | **[Xiaomi 17 4K120 Unlocker](https://github.com/Picters/Xiaomi17-4K120-Unlocker)** | Unlocks 4K120 video recording. |
 | **[Xiaomi 14 4K120 Unlocker](https://github.com/Picters/Xiaomi14-4K120-Unlocker)** | Unlocks 4K120 video recording. |
 
